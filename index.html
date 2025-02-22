@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Гра з фішками</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .hidden {
+            display: none;
+        }
+
+        .table {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+
+        <div>
+            <p>Калькулятор покерних фішок</p>
+            <label for="players">Оберіть кількість гравців:</label>
+            <select id="players" name="players">
+                <option value="" disabled selected>Оберіть</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+            </select>
+        </div>
+
+        <div id="players-inputs" class="hidden"></div>
+
+        <div id="chip-values" class="hidden">
+            <h3>Введіть номінал фішок:</h3>
+            <div>
+                <label>Білі фішки: </label><input type="number" id="white-value" value="1"><br>
+                <label>Червоні фішки: </label><input type="number" id="red-value" value="5"><br>
+                <label>Зелені фішки: </label><input type="number" id="green-value" value="10"><br>
+                <label>Сині фішки: </label><input type="number" id="blue-value" value="25"><br>
+                <label>Чорні фішки: </label><input type="number" id="black-value" value="100"><br>
+            </div>
+        </div>
+
+        <button id="calculate" class="hidden">Вирахувати</button>
+        <div id="result" class="hidden"></div>
+        <button id="reset" class="hidden">Очистити</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
