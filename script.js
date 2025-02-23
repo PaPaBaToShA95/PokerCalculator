@@ -5,20 +5,20 @@ const calculateBtn = document.getElementById('calculate');
 const resultDiv = document.getElementById('result');
 const resetBtn = document.getElementById('reset');
 
-// Створення полів для гравців
+
 playersSelect.addEventListener('change', () => {
     const numberOfPlayers = parseInt(playersSelect.value);
-    playersInputsDiv.innerHTML = ''; // Очищуємо попередні поля
+    playersInputsDiv.innerHTML = '';
     for (let i = 1; i <= numberOfPlayers; i++) {
         const playerDiv = document.createElement('div');
         playerDiv.classList.add('table');
         playerDiv.innerHTML = `
             <h3>Гравець ${i}</h3>
-            <label>Білі фішки: </label><input type="number" class="white-count" value="0"><br>
-            <label>Червоні фішки: </label><input type="number" class="red-count" value="0"><br>
-            <label>Зелені фішки: </label><input type="number" class="green-count" value="0"><br>
-            <label>Сині фішки: </label><input type="number" class="blue-count" value="0"><br>
-            <label>Чорні фішки: </label><input type="number" class="black-count" value="0"><br>
+            <label><img src="img/chip.svg" style="width: 20px; height: 20px; filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(100%) contrast(100%); vertical-align: top;">Білі фішки: </label><input type="number" class="white-count" value="0">шт.<br>
+            <label><img src="img/chip.svg" style="width: 20px; height: 20px; filter: invert(25%) sepia(96%) saturate(7483%) hue-rotate(359deg) brightness(103%) contrast(109%); vertical-align: top;">Червоні фішки: </label><input type="number" class="red-count" value="0">шт.<br>
+            <label><img src="img/chip.svg" style="width: 20px; height: 20px; filter: invert(55%) sepia(98%) saturate(419%) hue-rotate(70deg) brightness(86%) contrast(95%); vertical-align: top;">Зелені фішки: </label><input type="number" class="green-count" value="0">шт.<br>
+            <label><img src="img/chip.svg" style="width: 20px; height: 20px; filter: invert(40%) sepia(98%) saturate(2473%) hue-rotate(202deg) brightness(90%) contrast(100%); vertical-align: top;">Сині фішки: </label><input type="number" class="blue-count" value="0">шт.<br>
+            <label><img src="img/chip.svg" style="width: 20px; height: 20px; vertical-align: top;">Чорні фішки: </label><input type="number" class="black-count" value="0">шт.<br>
         `;
         playersInputsDiv.appendChild(playerDiv);
     }
@@ -49,18 +49,17 @@ calculateBtn.addEventListener('click', () => {
         results.push({ player: `Гравець ${index + 1}`, total });
     });
 
-    results.sort((a, b) => b.total - a.total); // Сортуємо результати по сумі
+    results.sort((a, b) => b.total - a.total);
 
-    // Виведення результатів
+
     resultDiv.innerHTML = '<h3>Результати</h3>';
     results.forEach((result, index) => {
-        resultDiv.innerHTML += `<p>${index + 1}-е місце: ${result.player}, результат: ${result.total}</p>`;
+        resultDiv.innerHTML += `<p class="winer">${index + 1}-е місце: ${result.player}; Результат: ${result.total} грн.</p>`;
     });
     resultDiv.classList.remove('hidden');
     resetBtn.classList.remove('hidden');
 });
 
-// Очищення гри
 resetBtn.addEventListener('click', () => {
     playersInputsDiv.innerHTML = '';
     resultDiv.innerHTML = '';

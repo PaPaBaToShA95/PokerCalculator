@@ -4,8 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Гра з фішками</title>
+    <title>Калькулятор покерних фішок</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="img/favicon.svg" type="image/x-icon">
+    <link rel="apple-touch-icon" href="img/iphone.svg">
+    <meta name="apple-mobile-web-app-title" content="Калькулятор покерних фішок">
+
+
+
     <style>
         .hidden {
             display: none;
@@ -20,8 +26,8 @@
 <body>
     <div class="main">
 
-        <div>
-            <p>Калькулятор покерних фішок</p>
+        <div class="table1">
+            <p class="title">Калькулятор покерних фішок</p>
             <label for="players">Оберіть кількість гравців:</label>
             <select id="players" name="players">
                 <option value="" disabled selected>Оберіть</option>
@@ -41,19 +47,30 @@
 
         <div id="chip-values" class="hidden">
             <h3>Введіть номінал фішок:</h3>
-            <div>
-                <label>Білі фішки: </label><input type="number" id="white-value" value="1"><br>
-                <label>Червоні фішки: </label><input type="number" id="red-value" value="5"><br>
-                <label>Зелені фішки: </label><input type="number" id="green-value" value="10"><br>
-                <label>Сині фішки: </label><input type="number" id="blue-value" value="25"><br>
-                <label>Чорні фішки: </label><input type="number" id="black-value" value="100"><br>
+            <div class="table2">
+                <label><img src="img/chip.svg"
+                        style="width: 20px; height: 20px; filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(100%) contrast(100%); vertical-align: top;">Білі
+                    фішки: </label><input type="number" id="white-value" value="0.5">шт.<br>
+                <label><img src="img/chip.svg"
+                        style="width: 20px; height: 20px; filter: invert(25%) sepia(96%) saturate(7483%) hue-rotate(359deg) brightness(103%) contrast(109%); vertical-align: top;">Червоні
+                    фішки: </label><input type="number" id="red-value" value="1">шт.<br>
+                <label><img src="img/chip.svg"
+                        style="width: 20px; height: 20px; filter: invert(55%) sepia(98%) saturate(419%) hue-rotate(70deg) brightness(86%) contrast(95%); vertical-align: top;">Зелені
+                    фішки: </label><input type="number" id="green-value" value="2.5">шт.<br>
+                <label><img src="img/chip.svg"
+                        style="width: 20px; height: 20px; filter: invert(40%) sepia(98%) saturate(2473%) hue-rotate(202deg) brightness(90%) contrast(100%); vertical-align: top;">Сині
+                    фішки: </label><input type="number" id="blue-value" value="5">шт.<br>
+                <label><img src="img/chip.svg" style="width: 20px; height: 20px; vertical-align: top;">Чорні фішки:
+                </label><input type="number" id="black-value" value="10">шт.<br>
             </div>
         </div>
 
         <button id="calculate" class="hidden">Вирахувати</button>
         <div id="result" class="hidden"></div>
         <button id="reset" class="hidden">Очистити</button>
+
     </div>
+    <p class="author">© Created by Oleksiy Ermantraut</p>
     <script src="script.js"></script>
 </body>
 

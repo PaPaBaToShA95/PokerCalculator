@@ -7,7 +7,9 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Roboto', sans-serif;
-
+    text-shadow: 2px 2px 4px #ffffff;
+    font-weight: 900;
+    font-size: 22px;
 }
 
 .main {
@@ -18,19 +20,117 @@ body {
     height: auto;
     margin: 0;
     font-family: 'Roboto', sans-serif;
+    margin-bottom: 100px;
+}
+
+.table1 {
+    text-align: right;
+    width: auto;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.table2 {
+    text-align: right;
+    width: auto;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
 
 }
 
 .table {
-    text-align: right;
-    width: 280px;
+    text-align: end;
 }
 
 #chip-values {
     text-align: right;
-    width: 280px;
+    width: max-content;
 }
 
 #calculate {
     margin-top: 50px;
+}
+
+.title {
+    color: white;
+    font-size: 30px;
+    margin-top: 50px;
+    text-align: center;
+    text-shadow: 2px 2px 4px #000000;
+}
+
+h3 {
+    text-align: center;
+}
+
+.author {
+    text-align: center;
+    color: white;
+    font-size: 20px;
+    margin-top: 50px;
+    position: relative;
+    bottom: 0;
+}
+
+#calculate {
+    background-color: darkgreen;
+    border-radius: 10px;
+    color: white;
+    padding: 10px 20px;
+    font-size: 20px;
+    cursor: pointer;
+    border: outset;
+}
+
+#calculate:hover {
+    background-color: green;
+    border-radius: 25px;
+    transform: matrix(1.1, 0, 0, 1.1, 0, 0);
+    transition: 0.5s;
+}
+
+#calculate:active {
+    background-color: darkgreen;
+    border-radius: 25px;
+    transform: matrix(1.1, 0, 0, 1.1, 0, 0);
+    transition: 0.5s;
+}
+
+#reset {
+    background-color: darkred;
+    border-radius: 10px;
+    color: white;
+    padding: 10px 20px;
+    font-size: 20px;
+    cursor: pointer;
+    pointer: coarse;
+    border: outset;
+}
+
+#reset:active {
+    background-color: red;
+    border-radius: 25px;
+    transform: matrix(1.1, 0, 0, 1.1, 0, 0);
+    transition: 0.5s;
+}
+
+#reset:hover {
+    background-color: red;
+    border-radius: 25px;
+    transform: matrix(1.1, 0, 0, 1.1, 0, 0);
+    transition: 0.5s;
+}
+
+.winer {
+    color: white;
+    font-size: 30px;
+    text-align: center;
+    margin-top: 50px;
+    text-shadow: 2px 2px 4px #000000;
 }
