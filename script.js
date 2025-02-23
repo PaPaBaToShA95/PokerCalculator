@@ -27,23 +27,23 @@ playersSelect.addEventListener('change', () => {
     calculateBtn.classList.remove('hidden');
 });
 
-// Обчислення результатів
+
 calculateBtn.addEventListener('click', () => {
-    const whiteValue = parseInt(document.getElementById('white-value').value);
-    const redValue = parseInt(document.getElementById('red-value').value);
-    const greenValue = parseInt(document.getElementById('green-value').value);
-    const blueValue = parseInt(document.getElementById('blue-value').value);
-    const blackValue = parseInt(document.getElementById('black-value').value);
+    const whiteValue = parseFloat(document.getElementById('white-value').value);
+    const redValue = parseFloat(document.getElementById('red-value').value);
+    const greenValue = parseFloat(document.getElementById('green-value').value);
+    const blueValue = parseFloat(document.getElementById('blue-value').value);
+    const blackValue = parseFloat(document.getElementById('black-value').value);
 
     const players = document.querySelectorAll('.table');
     const results = [];
 
     players.forEach((playerDiv, index) => {
-        const whiteCount = parseInt(playerDiv.querySelector('.white-count').value);
-        const redCount = parseInt(playerDiv.querySelector('.red-count').value);
-        const greenCount = parseInt(playerDiv.querySelector('.green-count').value);
-        const blueCount = parseInt(playerDiv.querySelector('.blue-count').value);
-        const blackCount = parseInt(playerDiv.querySelector('.black-count').value);
+        const whiteCount = parseFloat(playerDiv.querySelector('.white-count').value);
+        const redCount = parseFloat(playerDiv.querySelector('.red-count').value);
+        const greenCount = parseFloat(playerDiv.querySelector('.green-count').value);
+        const blueCount = parseFloat(playerDiv.querySelector('.blue-count').value);
+        const blackCount = parseFloat(playerDiv.querySelector('.black-count').value);
 
         const total = (whiteCount * whiteValue) + (redCount * redValue) + (greenCount * greenValue) + (blueCount * blueValue) + (blackCount * blackValue);
         results.push({ player: `Гравець ${index + 1}`, total });
